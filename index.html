@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Portfolio</title>
+
+     <link rel="icon" href="images/logo.png" type="image/png">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--Bootstrap ================================================== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!--vendor css ================================================== -->
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+.skill-text {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+    font-size: 16px;
+    color: #fff; /* Ensure text is visible */
+}
+
+.custom-progress {
+    height: 25px;
+    background-color: #333; /* Dark background for contrast */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.custom-progress .progress-bar {
+    text-align: right;
+    padding-right: 10px;
+    line-height: 25px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 12px;
+}
+
+
+/* Add shadow when scrolling */
+#header-nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker after scroll */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+</style>
+
+<body>
+
+    <div class="preloader text-white fs-6 text-uppercase overflow-hidden"></div>
+
+    <nav id="header-nav" class="navbar navbar-expand-lg py-4 fixed-top" data-bs-theme="dark">
+    <div class="container-fluid padding-side">
+        <a class="navbar-brand" href="index.html">
+            Joshua <span style="color: yellow;">Portfolio.</span>
+        </a>
+
+        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav text-center align-items-center justify-content-end flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link active pe-lg-5" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pe-lg-5" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pe-lg-5" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pe-lg-5" href="#projects">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pe-lg-5" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pe-lg-5" href="#contact">Contact Me</a>
+                    </li>
+                </ul>
+                <ul class="d-flex d-lg-none list-unstyled justify-content-center mt-4">
+                    <li>
+                        <a class="nav-link mx-2" href="#">
+                            <svg class="social-icon" width="24" height="24">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link mx-2" href="#">
+                            <svg class="social-icon" width="24" height="24">
+                                <use xlink:href="#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link mx-2" href="#">
+                            <svg class="social-icon" width="24" height="24">
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <section id="hero" class="padding-medium position-relative">
+        <div class="container text-white">
+            <div class="row flex-row-reverse justify-content-center align-items-center">
+                <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-duration="1400">
+                    <div class="position-relative">
+                        <img src="images/profile.jpg" alt="img" class="img-fluid rounded-circle w-100 p-5">
+                        <div class="position-absolute top-0">
+                            <img src="images/banner-img-border.png" alt="img"
+                                class="img-fluid rounded-circle animated-border">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 ">
+                   <p class="letter-space text-primary fw-semibold fs-3" data-aos="fade-up" data-aos-duration="1000">
+    Hi, I’m Joshua Villarino
+</p>
+<h2 class="banner-size fw-medium display-3 my-4" data-aos="fade-up" data-aos-duration="1200">
+    Learning Today, Building Tomorrow
+</h2>
+<p data-aos="fade-up" data-aos-duration="1400">
+    Welcome to my portfolio. I’m a student of Information Technology, passionate about designing and developing
+    digital projects that showcase creativity, problem-solving, and continuous learning. Explore my journey and 
+    growing skills in web development and design.
+</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+<hr>
+    <!-- About Section -->
+<section id="about" class="about section light-background py-5">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title text-center mb-5">
+            <h2>About Me</h2>
+            <p>
+                I am a student of Information Technology with a passion for web development and digital design. 
+                I enjoy learning new technologies, creating projects, and improving my skills through practice 
+                and real-world challenges.
+            </p>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-center mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                <img src="images/profile.jpg" class="img-fluid rounded-circle" alt="Joshua Villarino">
+            </div>
+            <div class="col-lg-8" data-aos="fade-left" data-aos-duration="1000">
+                <h3>Hello! I’m Joshua Villarino</h3>
+                <p>
+                    As a student, I am constantly learning and building my knowledge in programming, 
+                    web development, and design. I aim to grow my skills through academic projects, 
+                    personal experiments, and collaborative experiences. My goal is to contribute to 
+                    creative and impactful digital experiences in the future.
+                </p>
+
+                <ul class="list-unstyled">
+                    <li><strong>Education:</strong> Currently pursuing Information Technology</li>
+                    <li><strong>Skills:</strong> HTML, CSS, JavaScript, PHP, WordPress, Basic Design</li>
+                    <li><strong>Interests:</strong> Web Development, UI/UX Design, Technology, Learning New Skills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+
+<!-- Additional Skills Section -->
+<section id="skills" class="skills section light-background py-5">
+    <div class="container" data-aos="fade-up">
+        <!-- Section Title -->
+        <div class="section-title text-center mb-5">
+            <h2>Additional Skills</h2>
+            <p>Other tools and technologies I’m learning and experimenting with.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6 mb-4">
+                <div class="skill-block mb-4">
+                    <span class="skill-text">HTML</span>
+                    <div class="progress custom-progress">
+                        <div class="progress-bar" style="width: 65%; background-color: #f9c74f;">65%</div>
+                    </div>
+                </div>
+
+                <div class="skill-block mb-4">
+                    <span class="skill-text">CSS</span>
+                    <div class="progress custom-progress">
+                        <div class="progress-bar" style="width: 40%; background-color: #90be6d;">40%</div>
+                    </div>
+                </div>
+
+                <div class="skill-block mb-4">
+                    <span class="skill-text">JavaScript</span>
+                    <div class="progress custom-progress">
+                        <div class="progress-bar" style="width: 35%; background-color: #f94144;">35%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+                <div class="skill-block mb-4">
+                    <span class="skill-text">PHP</span>
+                    <div class="progress custom-progress">
+                        <div class="progress-bar" style="width: 50%; background-color: #577590;">50%</div>
+                    </div>
+                </div>
+
+                <div class="skill-block mb-4">
+                    <span class="skill-text">Git & GitHub</span>
+                    <div class="progress custom-progress">
+                        <div class="progress-bar" style="width: 60%; background-color: #f3722c;">60%</div>
+                    </div>
+                </div>
+
+                <div class="skill-block mb-4">
+                    <span class="skill-text">MySQL</span>
+                    <div class="progress custom-progress">
+                        <div class="progress-bar" style="width: 45%; background-color: #43aa8b;">45%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+
+<!-- Projects Section -->
+<section id="projects" class="projects section light-background py-5">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title text-center mb-5">
+            <h2>Projects</h2>
+            <p>
+                I am currently working on several academic and personal projects that will be added here soon. 
+                Stay tuned!
+            </p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-duration="1000">
+                <div class="icon-display mb-3" style="font-size: 50px;">📂</div>
+                <h3 class="fs-4">Projects Coming Soon</h3>
+                <p>Check back later to see my growing collection of projects and digital creations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+
+<!-- Resume Section -->
+<section id="resume" class="resume section light-background py-5">
+
+  <!-- Section Title -->
+  <div class="container section-title text-center" data-aos="fade-up">
+    <h2>Resume</h2>
+    <p>
+      Aspiring Information Technology professional with hands-on experience in programming and web development. Passionate about leveraging modern technologies to build practical solutions, solve complex problems, and continuously enhance technical expertise in preparation for a career in software and web development.
+    </p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="row">
+
+      <!-- LEFT SIDE -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Summary -->
+        <h3 class="resume-title">Summary</h3>
+        <div class="resume-item pb-0">
+          <h4>Joshua Villarino</h4>
+          <p><em>
+            Dedicated IT student with a love for coding and web development. Motivated, adaptable, and eager to gain real-world experience to grow as a software developer.
+          </em></p>
+          <ul>
+            <li>Madridejos, Cebu, Philippines</li>
+            <li>09954716584</li>
+            <li>villarinonihljoshua46@gmail.com</li>
+          </ul>
+        </div>
+
+        <!-- Education -->
+        <h3 class="resume-title">Education</h3>
+
+        <div class="resume-item">
+          <h4>Bachelor of Science in Information Technology</h4>
+          <h5>2022 - Present</h5>
+          <p><em>Madridejos Community College</em></p>
+          <p>
+            Relevant Coursework: Programming, Database Management, Web Development, 
+            Software Engineering, and System Analysis.
+          </p>
+        </div>
+
+        <div class="resume-item">
+          <h4>Senior High School</h4>
+          <h5>2020 - 2022</h5>
+          <p><em>Madridejos National High School</em></p>
+          <p>
+            Built a strong academic foundation while developing teamwork, communication, 
+            and problem-solving skills.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+
+        <h3 class="resume-title">Projects & Experience</h3>
+
+        <div class="resume-item">
+          <h4>Student Admission and Scholarship Evaluation System</h4>
+          <h5>2025</h5>
+          <p><em>Academic Project</em></p>
+          <ul>
+            <li>Developed a Java-based system to evaluate student admission eligibility.</li>
+            <li>Implemented boolean logic, conditional statements, and user input handling.</li>
+            <li>Strengthened programming and analytical thinking skills.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Personal Portfolio Website</h4>
+          <h5>2026</h5>
+          <p><em>Personal Project</em></p>
+          <ul>
+            <li>Designed and developed a responsive portfolio using HTML, CSS, and JavaScript.</li>
+            <li>Showcases technical skills, resume, and academic projects.</li>
+            <li>Continuously improved to reflect learning progress.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</section><!-- /Resume Section -->
+
+<hr>
+
+<!-- Contact Section -->
+<section id="contact" class="contact section light-background py-5">
+    <div class="container" data-aos="fade-up">
+        <!-- Section Title -->
+        <div class="section-title text-center mb-5">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for projects, collaborations, or just a friendly hello!</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <!-- Contact Info -->
+            <div class="col-lg-5 mb-4">
+                <div class="mb-3">
+                    <h5>Address</h5>
+                    <p>Madridejos, Cebu, Philippines</p>
+                </div>
+                <div class="mb-3">
+                    <h5>Phone</h5>
+                    <p>+63 995 471 6584</p>
+                </div>
+                <div class="mb-3">
+                    <h5>Email</h5>
+                    <p>villarinonihljoshua46@gmail.com</p>
+                </div>
+                <div class="mb-3">
+                    <h5>Follow Me</h5>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.facebook.com/Oshvillarino123" target="_blank">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M15.12 5.32H17V2.14A26 26 0 0 0 14.26 2c-2.72 0-4.58 1.66-4.58 4.7v2.62H6.61v3.56h3.07V22h3.68v-9.12h3.06l.46-3.56h-3.52V7.05c0-1.05.28-1.73 1.76-1.73"/>
+    </svg>
+</a>
+                        <a href="https://www.instagram.com/josshuwwa" target="_blank">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C8.74 2 8.33 2 5.88 2.06A7.3 7.3 0 0 0 3.45 2.53a4.7 4.7 0 0 0-1.77 1.15A4.8 4.8 0 0 0 .53 5.45a7.3 7.3 0 0 0-.47 2.43C0 8.94 0 9.28 0 12s0 3.06.06 4.12a7.3 7.3 0 0 0 .47 2.43 4.7 4.7 0 0 0 1.15 1.77 4.8 4.8 0 0 0 1.77 1.15 7.3 7.3 0 0 0 2.43.47C8.94 22 9.28 22 12 22s3.06 0 4.12-.06a7.3 7.3 0 0 0 2.43-.47 4.7 4.7 0 0 0 1.77-1.15 4.85 4.85 0 0 0 1.16-1.77 7.6 7.6 0 0 0 .46-2.43C22 15.06 22 14.72 22 12s0-3.06-.06-4.12a7.3 7.3 0 0 0-.47-2.43 4.7 4.7 0 0 0-1.15-1.77 4.8 4.8 0 0 0-1.77-1.15 7.3 7.3 0 0 0-2.43-.47C15.06 2 14.72 2 12 2zm0 4.87A5.13 5.13 0 1 0 17.13 12 5.12 5.12 0 0 0 12 6.87z"/>
+    </svg>
+</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="col-lg-7">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.123456789!2d123.456789!3d11.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a3f1234567890%3A0xabcdef1234567890!2sMadridejos%2C%20Cebu%2C%20Philippines!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col text-center">
+            <p class="mb-0">&copy; 2026 Joshua Villarino. All Rights Reserved.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('header-nav');
+        if (window.scrollY > 50) { // Change 50 to adjust scroll sensitivity
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+
+
+    <!-- script ================================================== -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+
+    <!-- Bootstarp script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!--iconify script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
