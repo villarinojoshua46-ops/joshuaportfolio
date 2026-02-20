@@ -72,6 +72,17 @@ img {
     border-radius: 12px;
 }
 
+.progress-bar {
+    width: 0;
+    height: 100%;
+    line-height: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    border-radius: 50px;
+    transition: width 1.8s ease-in-out;
+}
+
 
 /* Add shadow when scrolling */
 #header-nav.scrolled {
@@ -221,58 +232,66 @@ img {
 
 <!-- Additional Skills Section -->
 <section id="skills" class="skills section light-background py-5">
-    <div class="container" data-aos="fade-up">
+    <div class="container">
+
         <!-- Section Title -->
-        <div class="section-title text-center mb-5">
+        <div class="section-title text-center mb-5" data-aos="fade-up">
             <h2>Additional Skills</h2>
             <p>Other tools and technologies I’m learning and experimenting with.</p>
         </div>
 
         <div class="row justify-content-center">
+
+            <!-- LEFT COLUMN -->
             <div class="col-lg-6 mb-4">
-                <div class="skill-block mb-4">
+
+                <div class="skill-block mb-4" data-aos="fade-right">
                     <span class="skill-text">HTML</span>
                     <div class="progress custom-progress">
-                        <div class="progress-bar" style="width: 65%; background-color: #f9c74f;">65%</div>
+                        <div class="progress-bar animate-bar" data-width="65%" style="background-color: #f9c74f;">65%</div>
                     </div>
                 </div>
 
-                <div class="skill-block mb-4">
+                <div class="skill-block mb-4" data-aos="fade-right" data-aos-delay="100">
                     <span class="skill-text">CSS</span>
                     <div class="progress custom-progress">
-                        <div class="progress-bar" style="width: 40%; background-color: #90be6d;">40%</div>
+                        <div class="progress-bar animate-bar" data-width="40%" style="background-color: #90be6d;">40%</div>
                     </div>
                 </div>
 
-                <div class="skill-block mb-4">
+                <div class="skill-block mb-4" data-aos="fade-right" data-aos-delay="200">
                     <span class="skill-text">JavaScript</span>
                     <div class="progress custom-progress">
-                        <div class="progress-bar" style="width: 35%; background-color: #f94144;">35%</div>
+                        <div class="progress-bar animate-bar" data-width="35%" style="background-color: #f94144;">35%</div>
                     </div>
                 </div>
+
             </div>
 
+            <!-- RIGHT COLUMN -->
             <div class="col-lg-6 mb-4">
-                <div class="skill-block mb-4">
+
+                <div class="skill-block mb-4" data-aos="fade-left">
                     <span class="skill-text">PHP</span>
                     <div class="progress custom-progress">
-                        <div class="progress-bar" style="width: 50%; background-color: #577590;">50%</div>
+                        <div class="progress-bar animate-bar" data-width="50%" style="background-color: #577590;">50%</div>
                     </div>
                 </div>
 
-                <div class="skill-block mb-4">
+                <div class="skill-block mb-4" data-aos="fade-left" data-aos-delay="100">
                     <span class="skill-text">Git & GitHub</span>
                     <div class="progress custom-progress">
-                        <div class="progress-bar" style="width: 60%; background-color: #f3722c;">60%</div>
+                        <div class="progress-bar animate-bar" data-width="60%" style="background-color: #f3722c;">60%</div>
                     </div>
                 </div>
 
-                <div class="skill-block mb-4">
+                <div class="skill-block mb-4" data-aos="fade-left" data-aos-delay="200">
                     <span class="skill-text">MySQL</span>
                     <div class="progress custom-progress">
-                        <div class="progress-bar" style="width: 45%; background-color: #43aa8b;">45%</div>
+                        <div class="progress-bar animate-bar" data-width="45%" style="background-color: #43aa8b;">45%</div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -470,6 +489,23 @@ img {
             navbar.classList.remove('scrolled');
         }
     });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const bars = document.querySelectorAll(".animate-bar");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let bar = entry.target;
+                bar.style.width = bar.getAttribute("data-width");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    bars.forEach(bar => {
+        observer.observe(bar);
+    });
+});
 </script>
 
 
